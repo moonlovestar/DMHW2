@@ -1,9 +1,9 @@
 #ifndef INFOCACULATOR_H
 #define INFOCACULATOR_H
 #include <vector>
-class InfoCaculator{
+class InfoCalculator{
 	public:
-		static double infoCaculate(int p,int n);
+		static double infoCalculate(int p,int n);
 		static double infoClassCal(int NumOfattr,int NumOfPoint, std::vector<std::vector<double> > &attrVec);
 	private:
 

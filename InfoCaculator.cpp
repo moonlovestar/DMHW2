@@ -1,9 +1,10 @@
-#include "InfoCaculator.h"
+#include "InfoCalculator.h"
 #include <math.h>
 #include <iostream>
 using namespace std;
 
-double InfoCaculator::infoCaculate(int p,int n){
+// calculate the info
+double InfoCalculator::infoCalculate(int p,int n){
 	double p1=((double)p/(p+n));
 	double p2=((double)n/(p+n));
 	if(p1!=0&&p2!=0)
@@ -24,13 +25,13 @@ double InfoCaculator::infoCaculate(int p,int n){
 	}
 
 }
-double InfoCaculator::infoClassCal(int NumOfattr,int NumOfPoint,vector<vector<double> > &attrVec){
+double InfoCalculator::infoClassCal(int NumOfattr,int NumOfPoint,vector<vector<double> > &attrVec){
 	double result=0;
 	// cout<<0*log2(0)<<"GG"<<endl;
 	for(int i=0;i<NumOfattr;i++)
 	{
 		cout<<attrVec[i][0]<<" "<<attrVec[i][1]<<endl;
-		result+=((double)(attrVec[i][0]+attrVec[i][1])/NumOfPoint)*InfoCaculator::infoCaculate(attrVec[i][0],attrVec[i][1]);
+		result+=((double)(attrVec[i][0]+attrVec[i][1])/NumOfPoint)*InfoCalculator::infoCalculate(attrVec[i][0],attrVec[i][1]);
 	}
 		cout<<result<<endl;
 	return result;
