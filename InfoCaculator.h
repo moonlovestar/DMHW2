@@ -1,5 +1,5 @@
-#ifndef INFOCACULATOR_H
-#define INFOCACULATOR_H
+#ifndef INFOCALCULATOR_H
+#define INFOCALCULATOR_H
 #include <vector>
 class InfoCalculator{
 	public:
