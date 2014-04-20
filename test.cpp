@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <vector>
 #include <sstream>
+#include <string>
 using namespace std;
 
 vector<string> splitStringToWords(string inputString,string delim)
@@ -27,20 +28,20 @@ vector<string> splitStringToWords(string inputString,string delim)
 
 struct People{
         float age;
-        std::string workclass;
+        string workclass;
         float fnlwgt;
-        std::string education;
+        string education;
         float educationNum;
-        std::string maritalStatus;
-        std::string occupation;
-        std::string relationship;
-        std::string race;
-        std::string sex;
+        string maritalStatus;
+        string occupation;
+        string relationship;
+        string race;
+        string sex;
         float capitalGain;
         float capitalLoss;
         float hoursPerWeek;
-        std::string country;
-        std::string group;
+        string country;
+        string group;
 
 };
 
