@@ -77,7 +77,8 @@ int main()
 			tempPeople->hoursPerWeek = stof(tempString[12]);
 			tempPeople->country = tempString[13];
 			tempPeople->group = tempString[14];
-			people.push_back(tempPeople);
+			//people.push_back(tempPeople);
+			//people.insert (people.begin(), tempPeople);
 		}
 	}
 	else
