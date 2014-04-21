@@ -8,7 +8,7 @@ float stringToFloat(std::string str)
 	float result;
 	ss<<str;	
 	ss>>result;
-	std::cout<<result+10.3<<std::endl;
+	//std::cout<<result+10.3<<std::endl;
 	return result;
 }
 #endif
