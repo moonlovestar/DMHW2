@@ -4,6 +4,7 @@
 #include <vector>
 #include <sstream>
 #include <string>
+#include "MiscMethod.h"
 using namespace std;
 
 vector<string> splitStringToWords(string inputString,string delim)
@@ -53,8 +54,8 @@ int main()
     fstream file;
     vector<People> people;
     vector<string> tempString;
-    People* tempPeople;
-    tempPeople = new People;
+    //People* tempPeople = new People;
+    People tempPeople;
 
     file.open("census1997.dat");
     if(file)
@@ -63,23 +64,22 @@ int main()
 		while(getline(file,tempStr))
 		{
 			tempString = splitStringToWords(tempStr, " ,");
-			tempPeople->age = stof(tempString[0]);
-			tempPeople->workclass = tempString[1];
-			tempPeople->fnlwgt = stof(tempString[2]);
-			tempPeople->education = tempString[3];
-			tempPeople->educationNum = stof(tempString[4]);
-			tempPeople->maritalStatus = tempString[5];
-			tempPeople->occupation = tempString[6];
-			tempPeople->relationship = tempString[7];
-			tempPeople->race = tempString[8];
-			tempPeople->sex = tempString[9];
-			tempPeople->capitalGain = stof(tempString[10]);
-			tempPeople->capitalLoss = stof(tempString[11]);
-			tempPeople->hoursPerWeek = stof(tempString[12]);
-			tempPeople->country = tempString[13];
-			tempPeople->group = tempString[14];
-			//people.push_back(tempPeople);
-			//people.insert (people.begin(), tempPeople);
+			tempPeople.age = stringToFloat(tempString[0]);
+			tempPeople.workclass = tempString[1];
+			tempPeople.fnlwgt = stringToFloat(tempString[2]);
+			tempPeople.education = tempString[3];
+			tempPeople.educationNum = stringToFloat(tempString[4]);
+			tempPeople.maritalStatus = tempString[5];
+			tempPeople.occupation = tempString[6];
+			tempPeople.relationship = tempString[7];
+			tempPeople.race = tempString[8];
+			tempPeople.sex = tempString[9];
+			tempPeople.capitalGain = stringToFloat(tempString[10]);
+			tempPeople.capitalLoss = stringToFloat(tempString[11]);
+			tempPeople.hoursPerWeek = stringToFloat(tempString[12]);
+			tempPeople.country = tempString[13];
+			tempPeople.group = tempString[14];
+			people.push_back(tempPeople);
 		}
 	}
 	else
