@@ -1,8 +1,9 @@
 #include "InfoCalculator.h"
 #include "MiscMethod.h"
+#include "ClassifyEngine.h"
 #include <iostream>
 #include <vector>
-#include <string.h>
+#include <string>
 
 using namespace std;
 void generTestAttr(vector<vector<string> >&attr)
@@ -75,6 +76,9 @@ int main(int argc, char **argv){
 	// generTestAttr(attr);
 	// vector<string> result;
 	// recursiveTree(result,attr[0],attr,0);
-	stringToFloat("7.0");
+	// MiscMethod::stringToFloat("7.0");
+
+	ClassifyEngine CE;
+	CE.run();
 	return 0;
 }
